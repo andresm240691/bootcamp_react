@@ -12,7 +12,8 @@ import GreetingStyle from './components/pure/GreetingStyle';
 import Clock from './components/pure/Clock';
 import Father from './components/containers/Father'
 import OptionalRender from './components/pure/OptionalRender';
-
+import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 function App() {
   return (
@@ -34,7 +35,11 @@ function App() {
         {/* <Clock></Clock> */}
       {/* </header> */}
       {/* <Father></Father> */}
-      <TaskListComponent></TaskListComponent>
+      {/* USO DE FORMIK*/}
+      {/* <LoginFormik></LoginFormik> */}
+      <RegisterFormik></RegisterFormik>
+      {/*********************/}
+      {/* <TaskListComponent></TaskListComponent> */}
       {/* <OptionalRender></OptionalRender> */}
     </div>
   );
