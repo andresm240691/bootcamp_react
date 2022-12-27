@@ -37,9 +37,9 @@ function App() {
       {/* <Father></Father> */}
       {/* USO DE FORMIK*/}
       {/* <LoginFormik></LoginFormik> */}
-      <RegisterFormik></RegisterFormik>
+      {/* <RegisterFormik></RegisterFormik> */}
       {/*********************/}
-      {/* <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
       {/* <OptionalRender></OptionalRender> */}
     </div>
   );
