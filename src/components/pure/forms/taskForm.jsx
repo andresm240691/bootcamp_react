@@ -59,17 +59,6 @@ const TaskForm = ({add, lenghtTasks}) => {
   }
 
 
-  // function addTask(e){
-  //   e.preventDefault();
-  //   const newTask = new Task(
-  //     nameRef.current.value,
-  //     descriptionRef.current.value,
-  //     false,
-  //     levelRef.current.value
-  //   );
-  //   add(newTask);
-  // }
-
   const addTask = async(values) =>{
     await new Promise((r) => setTimeout(r, 1000));
     alert(JSON.stringify(values, null, 2));
