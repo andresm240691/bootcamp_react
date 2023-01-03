@@ -20,6 +20,7 @@ const loginSchema = Yup.object().shape(
 )
 
 const LoginFormik = () => {
+
   const  navigate = useNavigate(); 
   
   return (
@@ -50,7 +51,6 @@ const LoginFormik = () => {
                     <button type="submit">Submit</button>
                     {isSubmitting ? (<p>Login you  credentials...</p>): null}
                 </Form>
-                
             )}
         </Formik>
         <Link to='/register'>Are not you regsiter ? </Link>
