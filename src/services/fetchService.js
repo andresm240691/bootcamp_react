@@ -31,3 +31,22 @@ export const getUserDetail = async(id) =>{
         return {}
     }
 }
+
+export const login = async(email, passsowrd) =>{
+    let  body = {
+        email: "eve.holt@reqres.in",
+        password: "cityslicka"
+    };
+    console.log(body);
+    let response = await fetch(`https://reqres.in/api/login`, {
+        method: 'POST',
+        // cache: 'no-cache',
+        // headers:{
+        //     'Content-type': 'application/json'
+        // },
+        body: body,
+        // mode: 'no-cors',
+        // credentials:"omit"
+    });
+    return response.json();
+}

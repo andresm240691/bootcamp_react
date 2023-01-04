@@ -1,5 +1,10 @@
 import React, {useState, useEffect} from 'react'
-import { getAllUsers, getAllPageUsers, getUserDetail } from '../../services/fetchService'
+import { 
+    getAllUsers, 
+    getAllPageUsers, 
+    getUserDetail, 
+    login 
+} from '../../services/fetchService'
 
 
 const FetchExample = () => {
@@ -66,9 +71,25 @@ const FetchExample = () => {
             console.table(users);
         });
   }
+  
+  const authUser = () =>{
+    login("eve.holt@reqres.in", "cityslicka")
+        .then((response) =>{
+            console.log("USERS", response.data);
+            sessionStorage.setItem('token', response.token)
+        })
+        .catch((error)=>{
+            alert("Error while retreiving the users");
+        })
+        .finally(() => {
+            console.log("Ende login user. Navigate to Home");
+            
+        });
+  }
 
   return (
     <div>
+        <button onClick={() =>authUser()}>Login</button>
         <h2>users: </h2>
         { users.map((user, index) => (
             <p key={index}>
