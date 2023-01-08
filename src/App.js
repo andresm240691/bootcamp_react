@@ -18,6 +18,12 @@ import AsyncExample from './components/pure/AsyncExample';
 import ObservableExample from './components/pure/ObservableExample';
 import FetchExample from './components/pure/FetchExample';
 import AxiosExample from './components/pure/AxiosExample';
+import Chucknorris from './components/pure/Chucknorris';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
+import TodoContainer from './components/containers/TodoContainer';
+import TodoFormContainer from './components/containers/TodoFormContainer';
+import FilterOptions from './components/pure/FilterOptions';
+
 
 function App() {
   return (
@@ -48,8 +54,12 @@ function App() {
       {/* <AsyncExample></AsyncExample>   */}
       {/* <ObservableExample></ObservableExample> */}
       {/* <FetchExample></FetchExample> */}
-      <AxiosExample></AxiosExample>
-
+      {/* <AxiosExample></AxiosExample> */}
+      {/* <Chucknorris></Chucknorris> */}
+      {/* <AxiosCRUDExample></AxiosCRUDExample> */}
+      <TodoContainer></TodoContainer>
+      <TodoFormContainer></TodoFormContainer>
+      <FilterOptions></FilterOptions>
     </div>
   );
 }

@@ -10,14 +10,21 @@ import reportWebVitals from './reportWebVitals';
 import AppRoutingOne from './AppRoutingOne';
 import AppRoutingFinal from './AppRoutingFinal';
 
+// Redux imports
+import { createAppStore } from './store/config/storeConfig';
+import { Provider } from 'react-redux';
+
+let store = createAppStore();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-    {/* <AppRoutingOne></AppRoutingOne> */}
-    {/* <AppRoutingFinal></AppRoutingFinal> */}
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+      {/* <AppRoutingOne></AppRoutingOne> */}
+      {/* <AppRoutingFinal></AppRoutingFinal> */}
+    </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
