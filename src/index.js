@@ -11,10 +11,13 @@ import AppRoutingOne from './AppRoutingOne';
 import AppRoutingFinal from './AppRoutingFinal';
 
 // Redux imports
-import { createAppStore } from './store/config/storeConfig';
+import { createAppAsyncStore, createAppStore } from './store/config/storeConfig';
 import { Provider } from 'react-redux';
+import AppSagas from './AppSagas';
 
 let store = createAppStore();
+
+// let appAsyncStore = createAppAsyncStore()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +26,7 @@ root.render(
       <App />
       {/* <AppRoutingOne></AppRoutingOne> */}
       {/* <AppRoutingFinal></AppRoutingFinal> */}
+      {/* <AppSagas></AppSagas> */}
     </React.StrictMode>
   </Provider>
 );

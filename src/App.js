@@ -23,6 +23,7 @@ import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
 import TodoContainer from './components/containers/TodoContainer';
 import TodoFormContainer from './components/containers/TodoFormContainer';
 import FilterOptions from './components/pure/FilterOptions';
+import TaskListContainer from './components/containers/TaskListContainer';
 
 
 function App() {
@@ -48,8 +49,10 @@ function App() {
       {/* USO DE FORMIK*/}
       {/* <LoginFormik></LoginFormik> */}
       {/* <RegisterFormik></RegisterFormik> */}
-      {/*********************/}
+      
+      {/**************** FIAL PROYECT *******************/}
       {/* <TaskListComponent></TaskListComponent> */}
+      {/**************************************************/}  
       {/* <OptionalRender></OptionalRender> */}
       {/* <AsyncExample></AsyncExample>   */}
       {/* <ObservableExample></ObservableExample> */}
@@ -57,9 +60,14 @@ function App() {
       {/* <AxiosExample></AxiosExample> */}
       {/* <Chucknorris></Chucknorris> */}
       {/* <AxiosCRUDExample></AxiosCRUDExample> */}
-      <TodoContainer></TodoContainer>
+
+      {/* Sessions 22, 23, 24 */}
+      {/* <TodoContainer></TodoContainer>
       <TodoFormContainer></TodoFormContainer>
-      <FilterOptions></FilterOptions>
+      <FilterOptions></FilterOptions> */}
+
+      {/* Session TEST 22,23,24 */}
+      <TaskListContainer></TaskListContainer>
     </div>
   );
 }
