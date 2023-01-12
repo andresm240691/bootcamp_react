@@ -1,8 +1,8 @@
-import React, {useRef} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { LEVELS } from '../../../modules/elevels.enum';
 import {Task} from '../../../modules/task.class'
-import { Formik, Field, Form, ErrorMessage, yupToFormErrors } from 'formik';
+import { Formik, Field, Form, } from 'formik';
 import * as Yup from 'yup';
 
 
@@ -24,6 +24,7 @@ const TaskForm = ({add, lenghtTasks}) => {
       .required("Level is required")
   });
 
+  
   const instanceTaskForm = (lenghtTasks) =>{
     return (
       <Form className='d-flex justify-conetnt-center align-items-center mb-4 mt-5'>
@@ -60,15 +61,13 @@ const TaskForm = ({add, lenghtTasks}) => {
 
 
   const addTask = async(values) =>{
-    await new Promise((r) => setTimeout(r, 1000));
-    alert(JSON.stringify(values, null, 2));
-    console.log(values);
     const newTask = new Task(
       values.name,
       values.description,
       false,
       values.level
     );
+    console.log("NEW TASK", newTask);
     add(newTask);
   }
 
@@ -80,7 +79,7 @@ const TaskForm = ({add, lenghtTasks}) => {
         {instanceTaskForm(lenghtTasks)}
     </Formik>
   );
-} 
+}
 
 const styles = {
   urgentLabel:{

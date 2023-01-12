@@ -24,7 +24,10 @@ import TodoContainer from './components/containers/TodoContainer';
 import TodoFormContainer from './components/containers/TodoFormContainer';
 import FilterOptions from './components/pure/FilterOptions';
 import TaskListContainer from './components/containers/TaskListContainer';
-
+import Counter from './components/pure/Counter';
+import LoginUseState from './components/pure/LoginUseState';
+import LoginUseReducer from './components/pure/LoginUseReducer';
+import TaskUseReducer from './components/test2627/TaskUseReducer';
 
 function App() {
   return (
@@ -67,7 +70,15 @@ function App() {
       <FilterOptions></FilterOptions> */}
 
       {/* Session TEST 22,23,24 */}
-      <TaskListContainer></TaskListContainer>
+      {/* <TaskListContainer></TaskListContainer> */}
+
+      {/** Session 25 UseReducer and useContext */} 
+      {/* <Counter></Counter> */}
+      {/**Session 26 */}
+      {/* <LoginUseState></LoginUseState> */}
+      {/* <LoginUseReducer></LoginUseReducer> */}
+      {/**Test 26 y 270 */}
+      <TaskUseReducer></TaskUseReducer>
     </div>
   );
 }

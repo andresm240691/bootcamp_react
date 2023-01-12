@@ -51,7 +51,7 @@ const TaskComponent = ({ task, complete, remove }) => {
     }
     
     return (
-        <tr className='fw-normal' style={task.completed ? styles.taskCompleted: styles.taskPending}>
+        <tr className='fw-normal' style={task.completed === true ? styles.taskCompleted: styles.taskPending}>
             <th><span className='ms-2'>{task.name}</span></th>
             <th className='align-middle'>
                 <span className='ms-2'>{task.description}</span>
@@ -83,7 +83,6 @@ TaskComponent.propTypes = {
     task: PropTypes.instanceOf(Task).isRequired,
     complete: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired
-
 };
 
 
